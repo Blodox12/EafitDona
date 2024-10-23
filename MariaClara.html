@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecfit - Plataforma de Donaciones</title>
+    <link rel="stylesheet" href="MariaClara.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="logo">Ecfit</span>
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <nav class="nav-links">
+                <a href="#" onclick="showLogin()">Iniciar sesión</a>
+                <a href="#" onclick="showRegister()">Registrarse</a>
+                <a href="profile.html">Mi perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <aside class="sidebar">
+            <h3>Acceso Rápido</h3>
+            <ul>
+                <li><a href="donantes.html">Donantes</a></li>
+                <li><a href="contact.html">Contáctanos</a></li>
+                <li><a href="admin-panel.html">Panel de administración</a></li>
+            </ul>
+        </aside>
+
+        <section class="content">
+            <h2>Zona de donaciones</h2>
+            <div class="donation-form">
+                <h3>Formulario</h3>
+                <form action="DonationServlet" method="post" enctype="multipart/form-data">
+                    <div class="upload-image" id="uploadImage">
+                        <input type="file" name="image" accept="image/*">
+                        Subir imagen
+                    </div>
+                    <textarea name="description" placeholder="Descripción"></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+            </div>
+
+            <div class="donation-items">
+                <div class="item">
+                    <img src="/api/placeholder/100/100" alt="Camiseta">
+                    <p>Descripción</p>
+                    <a href="solicitar.html"><button>Solicitar</button></a>
+                    <a href="ver-mas.html"><button>Ver más</button></a>
+                </div>
+                <!-- Más items de donación aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="privacy.html">Política de privacidad</a>
+                <a href="suggestions.html">Sugerencias</a>
+                <a href="report.html">Reportar</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://instagram.com" class="icon-instagram">Instagram</a>
+                <a href="https://facebook.com" class="icon-facebook">Facebook</a>
+                <a href="https://twitter.com" class="icon-twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for login and registration -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h3>Iniciar sesión</h3>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button onclick="login()">Entrar</button>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h3>Registrarse</h3>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <button onclick="register()">Registrar</button>
+        </div>
+    </div>
+
+    <!-- Import the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

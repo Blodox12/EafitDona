@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Donación</title>
+    <link rel="stylesheet" href="MariaClara.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Solicitar Donación</h2>
+        <form action="requestDonationServlet" method="post">
+            <input type="text" name="item" placeholder="Artículo solicitado" required>
+            <textarea name="reason" placeholder="Motivo de la solicitud" required></textarea>
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
