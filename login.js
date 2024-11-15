@@ -130,9 +130,9 @@ function loadDonationDetails() {
     document.querySelector('.container p:nth-child(4)').innerHTML = `Disponibilidad: ${donationDetails.availability}`;
 }
 
-// General form submission event listeners and session management
+
 window.onload = function() {
-    // Adding event listeners for forms
+    
     if (document.querySelector('form[action="loginServlet"]')) {
         document.querySelector('form[action="loginServlet"]').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -161,17 +161,17 @@ window.onload = function() {
         });
     }
 
-    // Load user profile data if on profile page
+    
     if (document.body.classList.contains('profile-page')) {
         loadProfileData();
     }
 
-    // Load donors if on donor page
+    
     if (document.querySelector('ul')) {
         loadDonors();
     }
 
-    // Load donation details if on donation details page
+    
     if (document.body.classList.contains('donation-details')) {
         loadDonationDetails();
     }

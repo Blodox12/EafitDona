@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil</title>
-    <link rel="stylesheet" href="MariaClara.css">
+    <link rel="stylesheet" href="EafitDona.css">
 </head>
 <body class="profile-page">
-    <div class="container">
+    <div class="container profile-page">
         <h2>Perfil del Usuario</h2>
-        <p>Nombre de usuario: [Nombre]</p>
-        <p>Correo electrónico: [Correo]</p>
-        <a href="edit-profile.html"><button>Editar Perfil</button></a>
-        <a href="logout.html"><button>Cerrar Sesión</button></a>
+        <p>Nombre de usuario: <span id="username"></span></p>
+        <p>Correo electrónico: <span id="email"></span></p>
+        <button onclick="editProfile()">Editar Perfil</button>
+        <button onclick="logout()">Cerrar Sesión</button>
     </div>
 
-    <script src="login.js"></script>
+    <script src="profile.js"></script>
 </body>
 </html>
